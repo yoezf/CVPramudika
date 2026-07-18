@@ -3,16 +3,15 @@
    script.js — Interactive and Dynamic Logic
    Sections:
    1.  Configuration & State (Certificate and CV Data)
-   2.  Theme Toggle (Light/Dark Mode)
+   2.  Theme Toggle (Light/Dark Mode, default: light)
    3.  Mobile Menu Toggle (Hamburger)
    4.  Typed Profession Effect
-   5.  Skills Category Tabs & Progress Bars
+   5.  Skills Category Tabs
    6.  Certificate Card Generator
    7.  PDF Preview Modal Viewer
    8.  Scroll & Active Link Highlight
    9.  Back to Top Button
-   10. Intersection Observer (Fade-In Animations)
-   11. Statistics Counter Animation
+   10. Statistics Counter Animation
 ============================================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -24,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initPdfModal();
   initScrollEffects();
   initBackToTop();
-  initIntersectionObserver();
+  initStatCounters();
 });
 
 /* ============================================================
@@ -88,10 +87,9 @@ function initTheme() {
   const themeToggle = document.getElementById("theme-toggle");
   if (!themeToggle) return;
 
-  // Check saved theme or system preference
+  // Default is always light mode; only a saved manual choice changes it
   const savedTheme = localStorage.getItem("theme");
-  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const initialTheme = savedTheme || (systemPrefersDark ? "dark" : "light");
+  const initialTheme = savedTheme === "dark" ? "dark" : "light";
 
   document.documentElement.setAttribute("data-theme", initialTheme);
   updateThemeButton(themeToggle, initialTheme);
@@ -122,6 +120,7 @@ function updateThemeButton(button, theme) {
 function initMobileMenu() {
   const hamburger = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobile-menu");
+  const backdrop = document.getElementById("mobile-menu-backdrop");
   const mobileLinks = document.querySelectorAll(".mobile-nav-link");
 
   if (!hamburger || !mobileMenu) return;
@@ -134,16 +133,41 @@ function initMobileMenu() {
       hamburger.setAttribute("aria-expanded", "false");
       mobileMenu.classList.remove("open");
       mobileMenu.setAttribute("aria-hidden", "true");
+      if (backdrop) {
+        backdrop.classList.remove("open");
+        backdrop.setAttribute("hidden", "true");
+      }
+      document.body.style.overflow = "";
     } else {
       // Open menu
       hamburger.classList.add("active");
       hamburger.setAttribute("aria-expanded", "true");
       mobileMenu.classList.add("open");
       mobileMenu.setAttribute("aria-hidden", "false");
+      if (backdrop) {
+        backdrop.removeAttribute("hidden");
+        // Next frame so the opacity transition actually plays
+        requestAnimationFrame(() => backdrop.classList.add("open"));
+      }
+      document.body.style.overflow = "hidden";
     }
   }
 
   hamburger.addEventListener("click", toggleMenu);
+
+  // Tapping the dimmed backdrop closes the menu instead of blocking the page
+  if (backdrop) {
+    backdrop.addEventListener("click", () => {
+      if (hamburger.classList.contains("active")) toggleMenu();
+    });
+  }
+
+  // Escape key closes the menu
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && hamburger.classList.contains("active")) {
+      toggleMenu();
+    }
+  });
 
   mobileLinks.forEach(link => {
     link.addEventListener("click", () => {
@@ -227,35 +251,11 @@ function initSkillsTabs() {
       panels.forEach(panel => {
         if (panel.getAttribute("data-panel") === targetCategory) {
           panel.classList.add("active");
-          // Trigger animations inside the newly active panel
-          animatePanelProgressBars(panel);
         } else {
           panel.classList.remove("active");
-          resetPanelProgressBars(panel);
         }
       });
     });
-  });
-
-  // Initial trigger for the active panel
-  const initialActivePanel = document.querySelector(".skills-panel.active");
-  if (initialActivePanel) {
-    setTimeout(() => animatePanelProgressBars(initialActivePanel), 600);
-  }
-}
-
-function animatePanelProgressBars(panel) {
-  const bars = panel.querySelectorAll(".skill-progress-fill");
-  bars.forEach(bar => {
-    const targetWidth = bar.getAttribute("data-width");
-    bar.style.width = `${targetWidth}%`;
-  });
-}
-
-function resetPanelProgressBars(panel) {
-  const bars = panel.querySelectorAll(".skill-progress-fill");
-  bars.forEach(bar => {
-    bar.style.width = "0%";
   });
 }
 
@@ -276,7 +276,6 @@ function generateCertificates() {
   CERTIFICATES_DATA.forEach((cert, index) => {
     const card = document.createElement("div");
     card.className = "cert-card glass-card";
-    card.setAttribute("data-animate", "fade-up");
     
     // Build tags markup
     const tagsMarkup = cert.tags.map(tag => `<span class="tag">${tag}</span>`).join(" ");
@@ -460,47 +459,12 @@ function initBackToTop() {
 }
 
 /* ============================================================
-   10. INTERSECTION OBSERVER (Fade-In Animations)
+   10. STATISTICS COUNTER ANIMATION
 ============================================================ */
-function initIntersectionObserver() {
-  const animatedElements = document.querySelectorAll("[data-animate]");
-
-  const observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.15
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animated");
-        
-        // Custom trigger for counters
-        if (entry.target.classList.contains("stat-card")) {
-          animateCounter(entry.target.querySelector(".stat-number"));
-        }
-        
-        // Custom trigger for skill fills
-        if (entry.target.classList.contains("skill-card")) {
-          const bar = entry.target.querySelector(".skill-progress-fill");
-          if (bar) {
-            const width = bar.getAttribute("data-width");
-            bar.style.width = `${width}%`;
-          }
-        }
-
-        observer.unobserve(entry.target); // Trigger only once
-      }
-    });
-  }, observerOptions);
-
-  animatedElements.forEach(el => observer.observe(el));
+function initStatCounters() {
+  document.querySelectorAll(".stat-number").forEach(animateCounter);
 }
 
-/* ============================================================
-   11. STATISTICS COUNTER ANIMATION
-============================================================ */
 function animateCounter(counterElement) {
   if (!counterElement) return;
 

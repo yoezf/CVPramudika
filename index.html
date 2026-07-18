@@ -115,6 +115,7 @@
       <li><a href="#contact"      class="mobile-nav-link">Contact</a></li>
     </ul>
   </div>
+  <div id="mobile-menu-backdrop" class="mobile-menu-backdrop" hidden></div>
 </header>
 
 <!-- ============================================================
@@ -126,12 +127,10 @@
        HERO SECTION
   ========================================================== -->
   <section id="home" class="hero" aria-label="Hero - Pramudita Andhika Pratama">
-    <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
-    <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
-    <div class="hero-blob hero-blob-3" aria-hidden="true"></div>
+
     <div class="container hero-inner">
       <!-- Profile Photo -->
-      <div class="hero-photo-wrapper fade-in-left">
+      <div class="hero-photo-wrapper">
         <div class="hero-photo-ring" aria-hidden="true"></div>
         <img src="assets/img/profile.jpg" alt="Foto profil Pramudita Andhika Pratama, S.Sos" class="hero-photo" width="280" height="280" loading="eager" onerror="this.onerror=null;this.src='assets/img/avatar-placeholder.svg'" />
         <div class="hero-photo-badge" aria-hidden="true">
@@ -140,7 +139,7 @@
         </div>
       </div>
       <!-- Hero Text -->
-      <div class="hero-text fade-in-right">
+      <div class="hero-text">
         <p class="hero-greeting">Halo, saya &#x1F44B;</p>
         <h1 class="hero-name">Pramudita Andhika<br /><span class="hero-name-highlight">Pratama, S.Sos</span></h1>
         <p class="hero-profession" id="typed-profession" aria-live="polite">Administrasi &amp; Manajemen Profesional</p>
@@ -188,14 +187,14 @@
   ========================================================== -->
   <section id="about" class="section section-alt" aria-label="Tentang Saya">
     <div class="container">
-      <div class="section-header" data-animate="fade-up">
+      <div class="section-header">
         <span class="section-tag">Tentang Saya</span>
         <h2 class="section-title">Kenali Saya Lebih Dekat</h2>
         <p class="section-subtitle">Profesional muda yang bersemangat dan berkomitmen tinggi</p>
       </div>
       <div class="about-grid">
         <!-- About Card -->
-        <div class="about-content" data-animate="fade-right">
+        <div class="about-content">
           <div class="about-card glass-card">
             <h3 class="about-card-title">Profil Profesional</h3>
             <p class="about-text">Saya adalah mahasiswa tingkat akhir Universitas Nurtanio jurusan <strong>Administrasi Negara</strong> dengan minat berkarier di bidang administrasi, manajemen, dan pelayanan.</p>
@@ -212,24 +211,24 @@
           </div>
         </div>
         <!-- Stats -->
-        <div class="about-stats-wrapper" data-animate="fade-left">
+        <div class="about-stats-wrapper">
           <div class="about-stats-grid">
-            <div class="stat-card glass-card" data-animate="zoom">
+            <div class="stat-card glass-card">
               <div class="stat-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
               <div class="stat-number" data-target="4">0</div>
               <div class="stat-label">Tahun Pengalaman</div>
             </div>
-            <div class="stat-card glass-card" data-animate="zoom">
+            <div class="stat-card glass-card">
               <div class="stat-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
               <div class="stat-number" data-target="10">0</div>
               <div class="stat-label">Proyek Selesai</div>
             </div>
-            <div class="stat-card glass-card" data-animate="zoom">
+            <div class="stat-card glass-card">
               <div class="stat-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
               <div class="stat-number" data-target="5">0</div>
               <div class="stat-label">Sertifikat</div>
             </div>
-            <div class="stat-card glass-card" data-animate="zoom">
+            <div class="stat-card glass-card">
               <div class="stat-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
               <div class="stat-number" data-target="2">0</div>
               <div class="stat-label">Perusahaan</div>
@@ -255,7 +254,7 @@
   ========================================================== -->
   <section id="skills" class="section" aria-label="Keahlian">
     <div class="container">
-      <div class="section-header" data-animate="fade-up">
+      <div class="section-header">
         <span class="section-tag">Keahlian</span>
         <h2 class="section-title">Skills &amp; Kompetensi</h2>
         <p class="section-subtitle">Keterampilan teknis dan non-teknis yang saya kuasai</p>
@@ -272,132 +271,100 @@
         <!-- Administrasi Panel -->
         <div class="skills-panel active" data-panel="administrasi">
           <div class="skills-cards-grid">
-            <div class="skill-card glass-card" data-animate="fade-up">
+            <div class="skill-card glass-card">
               <div class="skill-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
               <h4 class="skill-card-title">Manajemen Administrasi</h4>
               <p class="skill-card-desc">Penyusunan dokumen, pengarsipan, dan tata kelola administrasi secara profesional</p>
-              <div class="skill-progress-bar" aria-hidden="true"><div class="skill-progress-fill" data-width="85" style="width:0%"></div></div>
-              <span class="skill-percent">85%</span>
             </div>
-            <div class="skill-card glass-card" data-animate="fade-up">
+            <div class="skill-card glass-card">
               <div class="skill-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
               <h4 class="skill-card-title">Riset &amp; Pengumpulan Data</h4>
               <p class="skill-card-desc">Kemampuan mengumpulkan, menganalisis, dan menyajikan data secara akurat</p>
-              <div class="skill-progress-bar" aria-hidden="true"><div class="skill-progress-fill" data-width="80" style="width:0%"></div></div>
-              <span class="skill-percent">80%</span>
             </div>
-            <div class="skill-card glass-card" data-animate="fade-up">
+            <div class="skill-card glass-card">
               <div class="skill-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
               <h4 class="skill-card-title">Tata Kelola Organisasi</h4>
               <p class="skill-card-desc">Pengelolaan administrasi publik dan tata kelola organisasi pemerintahan</p>
-              <div class="skill-progress-bar" aria-hidden="true"><div class="skill-progress-fill" data-width="82" style="width:0%"></div></div>
-              <span class="skill-percent">82%</span>
             </div>
-            <div class="skill-card glass-card" data-animate="fade-up">
+            <div class="skill-card glass-card">
               <div class="skill-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
               <h4 class="skill-card-title">Manajemen Waktu</h4>
               <p class="skill-card-desc">Mengatur prioritas dan menyelesaikan tugas tepat waktu sesuai deadline</p>
-              <div class="skill-progress-bar" aria-hidden="true"><div class="skill-progress-fill" data-width="90" style="width:0%"></div></div>
-              <span class="skill-percent">90%</span>
             </div>
           </div>
         </div>
         <!-- Tools Panel -->
         <div class="skills-panel" data-panel="tools">
           <div class="skills-cards-grid">
-            <div class="skill-card glass-card" data-animate="fade-up">
+            <div class="skill-card glass-card">
               <div class="skill-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
               <h4 class="skill-card-title">Microsoft Word</h4>
               <p class="skill-card-desc">Pembuatan dan pengelolaan dokumen, laporan, dan surat resmi profesional</p>
-              <div class="skill-progress-bar" aria-hidden="true"><div class="skill-progress-fill" data-width="90" style="width:0%"></div></div>
-              <span class="skill-percent">90%</span>
             </div>
-            <div class="skill-card glass-card" data-animate="fade-up">
+            <div class="skill-card glass-card">
               <div class="skill-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg></div>
               <h4 class="skill-card-title">Microsoft Excel</h4>
               <p class="skill-card-desc">Pengolahan data, pembuatan tabel, dan laporan menggunakan spreadsheet</p>
-              <div class="skill-progress-bar" aria-hidden="true"><div class="skill-progress-fill" data-width="85" style="width:0%"></div></div>
-              <span class="skill-percent">85%</span>
             </div>
-            <div class="skill-card glass-card" data-animate="fade-up">
+            <div class="skill-card glass-card">
               <div class="skill-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
               <h4 class="skill-card-title">Microsoft PowerPoint</h4>
               <p class="skill-card-desc">Pembuatan presentasi profesional untuk berbagai kebutuhan bisnis</p>
-              <div class="skill-progress-bar" aria-hidden="true"><div class="skill-progress-fill" data-width="80" style="width:0%"></div></div>
-              <span class="skill-percent">80%</span>
             </div>
-            <div class="skill-card glass-card" data-animate="fade-up">
+            <div class="skill-card glass-card">
               <div class="skill-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
               <h4 class="skill-card-title">Sistem Pengarsipan</h4>
               <p class="skill-card-desc">Pengelolaan arsip fisik dan digital secara terstruktur dan mudah diakses</p>
-              <div class="skill-progress-bar" aria-hidden="true"><div class="skill-progress-fill" data-width="88" style="width:0%"></div></div>
-              <span class="skill-percent">88%</span>
             </div>
           </div>
         </div>
         <!-- Soft Skills Panel -->
         <div class="skills-panel" data-panel="softskills">
           <div class="skills-cards-grid">
-            <div class="skill-card glass-card" data-animate="fade-up">
+            <div class="skill-card glass-card">
               <div class="skill-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
               <h4 class="skill-card-title">Kerja Tim &amp; Kolaborasi</h4>
               <p class="skill-card-desc">Mampu berkolaborasi efektif dengan berbagai pihak untuk mencapai tujuan bersama</p>
-              <div class="skill-progress-bar" aria-hidden="true"><div class="skill-progress-fill" data-width="92" style="width:0%"></div></div>
-              <span class="skill-percent">92%</span>
             </div>
-            <div class="skill-card glass-card" data-animate="fade-up">
+            <div class="skill-card glass-card">
               <div class="skill-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
               <h4 class="skill-card-title">Komunikasi Profesional</h4>
               <p class="skill-card-desc">Komunikasi formal dan profesional secara lisan maupun tulisan</p>
-              <div class="skill-progress-bar" aria-hidden="true"><div class="skill-progress-fill" data-width="88" style="width:0%"></div></div>
-              <span class="skill-percent">88%</span>
             </div>
-            <div class="skill-card glass-card" data-animate="fade-up">
+            <div class="skill-card glass-card">
               <div class="skill-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
               <h4 class="skill-card-title">Manajemen Prioritas</h4>
               <p class="skill-card-desc">Terampil mengatur prioritas kerja dan menyelesaikan tugas sesuai tenggat waktu</p>
-              <div class="skill-progress-bar" aria-hidden="true"><div class="skill-progress-fill" data-width="90" style="width:0%"></div></div>
-              <span class="skill-percent">90%</span>
             </div>
-            <div class="skill-card glass-card" data-animate="fade-up">
+            <div class="skill-card glass-card">
               <div class="skill-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
               <h4 class="skill-card-title">Adaptasi &amp; Fleksibilitas</h4>
               <p class="skill-card-desc">Tingkat adaptasi tinggi di lingkungan kerja baru dan beragam situasi</p>
-              <div class="skill-progress-bar" aria-hidden="true"><div class="skill-progress-fill" data-width="95" style="width:0%"></div></div>
-              <span class="skill-percent">95%</span>
             </div>
           </div>
         </div>
         <!-- Operasional Panel -->
         <div class="skills-panel" data-panel="operasional">
           <div class="skills-cards-grid">
-            <div class="skill-card glass-card" data-animate="fade-up">
+            <div class="skill-card glass-card">
               <div class="skill-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
               <h4 class="skill-card-title">Administrasi Gudang</h4>
               <p class="skill-card-desc">Pencatatan data keluar masuk barang, penataan stok, dan laporan gudang</p>
-              <div class="skill-progress-bar" aria-hidden="true"><div class="skill-progress-fill" data-width="88" style="width:0%"></div></div>
-              <span class="skill-percent">88%</span>
             </div>
-            <div class="skill-card glass-card" data-animate="fade-up">
+            <div class="skill-card glass-card">
               <div class="skill-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
               <h4 class="skill-card-title">Manajemen Distribusi</h4>
               <p class="skill-card-desc">Koordinasi distribusi barang dan ketepatan waktu pengiriman ke tujuan</p>
-              <div class="skill-progress-bar" aria-hidden="true"><div class="skill-progress-fill" data-width="85" style="width:0%"></div></div>
-              <span class="skill-percent">85%</span>
             </div>
-            <div class="skill-card glass-card" data-animate="fade-up">
+            <div class="skill-card glass-card">
               <div class="skill-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
               <h4 class="skill-card-title">Quality Control Packaging</h4>
               <p class="skill-card-desc">Penanganan proses pengepakan barang sesuai standar kualitas perusahaan</p>
-              <div class="skill-progress-bar" aria-hidden="true"><div class="skill-progress-fill" data-width="87" style="width:0%"></div></div>
-              <span class="skill-percent">87%</span>
             </div>
-            <div class="skill-card glass-card" data-animate="fade-up">
+            <div class="skill-card glass-card">
               <div class="skill-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
               <h4 class="skill-card-title">Koordinasi Logistik</h4>
               <p class="skill-card-desc">Koordinasi antar tim untuk kelancaran alur logistik dan pengiriman</p>
-              <div class="skill-progress-bar" aria-hidden="true"><div class="skill-progress-fill" data-width="83" style="width:0%"></div></div>
-              <span class="skill-percent">83%</span>
             </div>
           </div>
         </div>
@@ -410,14 +377,14 @@
   ========================================================== -->
   <section id="experience" class="section section-alt" aria-label="Pengalaman Kerja">
     <div class="container">
-      <div class="section-header" data-animate="fade-up">
+      <div class="section-header">
         <span class="section-tag">Pengalaman</span>
         <h2 class="section-title">Riwayat Pekerjaan</h2>
         <p class="section-subtitle">Jejak karier dan pengalaman profesional</p>
       </div>
       <div class="timeline" role="list">
         <!-- Job 1 -->
-        <article class="timeline-item" role="listitem" data-animate="fade-right">
+        <article class="timeline-item" role="listitem">
           <div class="timeline-dot" aria-hidden="true"><div class="timeline-dot-inner"></div></div>
           <div class="timeline-content glass-card">
             <div class="timeline-header">
@@ -442,7 +409,7 @@
           </div>
         </article>
         <!-- Job 2 -->
-        <article class="timeline-item" role="listitem" data-animate="fade-left">
+        <article class="timeline-item" role="listitem">
           <div class="timeline-dot" aria-hidden="true"><div class="timeline-dot-inner"></div></div>
           <div class="timeline-content glass-card">
             <div class="timeline-header">
@@ -475,14 +442,14 @@
   ========================================================== -->
   <section id="education" class="section" aria-label="Riwayat Pendidikan">
     <div class="container">
-      <div class="section-header" data-animate="fade-up">
+      <div class="section-header">
         <span class="section-tag">Pendidikan</span>
         <h2 class="section-title">Riwayat Pendidikan</h2>
         <p class="section-subtitle">Perjalanan akademik yang membentuk kompetensi saya</p>
       </div>
       <div class="edu-grid">
         <!-- S1 -->
-        <div class="edu-card glass-card" data-animate="fade-up">
+        <div class="edu-card glass-card">
           <div class="edu-card-left">
             <div class="edu-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
             <div class="edu-timeline-line" aria-hidden="true"></div>
@@ -495,18 +462,7 @@
             <div class="edu-subjects"><span class="tag">Administrasi Publik</span><span class="tag">Kebijakan Publik</span><span class="tag">Manajemen SDM</span><span class="tag">Riset Sosial</span></div>
           </div>
         </div>
-        <!-- MA -->
-        <div class="edu-card glass-card" data-animate="fade-up">
-          <div class="edu-card-left">
-            <div class="edu-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-          </div>
-          <div class="edu-card-right">
-            <div class="edu-badge-row"><span class="edu-badge">MA</span><span class="edu-period">2017 &#x2013; 2020</span><span class="edu-status edu-status-done">Lulus</span></div>
-            <h3 class="edu-degree">Madrasah Aliyah</h3>
-            <p class="edu-institution">MA Assuruur</p>
-            <p class="edu-desc">Menyelesaikan pendidikan menengah atas dengan jurusan Ilmu Pengetahuan Alam. Membangun fondasi akademik yang kuat sebagai persiapan melanjutkan pendidikan ke jenjang yang lebih tinggi.</p>
-            <div class="edu-subjects"><span class="tag">IPA</span><span class="tag">Matematika</span><span class="tag">Biologi</span><span class="tag">Kimia</span></div>
-          </div>
+        
         </div>
       </div>
     </div>
@@ -517,7 +473,7 @@
   ========================================================== -->
   <section id="certificates" class="section section-alt" aria-label="Sertifikat">
     <div class="container">
-      <div class="section-header" data-animate="fade-up">
+      <div class="section-header">
         <span class="section-tag">Sertifikat</span>
         <h2 class="section-title">Sertifikat &amp; Dokumen</h2>
         <p class="section-subtitle">Dokumen pendukung kompetensi dan legalitas profesional</p>
@@ -533,12 +489,12 @@
   ========================================================== -->
   <section id="cv-section" class="section" aria-label="Curriculum Vitae">
     <div class="container">
-      <div class="section-header" data-animate="fade-up">
+      <div class="section-header">
         <span class="section-tag">Curriculum Vitae</span>
         <h2 class="section-title">Dokumen CV</h2>
         <p class="section-subtitle">Lihat dan unduh CV lengkap saya</p>
       </div>
-      <div class="cv-wrapper" data-animate="fade-up">
+      <div class="cv-wrapper">
         <div class="cv-actions">
           <a href="assets/pdf/cv.pdf" download="CV_Pramudita_Andhika_Pratama.pdf" class="btn btn-primary" aria-label="Unduh CV">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -566,14 +522,14 @@
   ========================================================== -->
   <section id="contact" class="section section-alt" aria-label="Kontak">
     <div class="container">
-      <div class="section-header" data-animate="fade-up">
+      <div class="section-header">
         <span class="section-tag">Kontak</span>
         <h2 class="section-title">Hubungi Saya</h2>
         <p class="section-subtitle">Saya terbuka untuk peluang kerja dan kolaborasi</p>
       </div>
       <div class="contact-grid">
         <!-- Contact Cards -->
-        <div class="contact-cards" data-animate="fade-right">
+        <div class="contact-cards">
           <a href="mailto:pramuditaandhika68@gmail.com" class="contact-card glass-card" aria-label="Kirim email">
             <div class="contact-card-icon contact-icon-email" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
             <div class="contact-card-body"><span class="contact-card-label">Email</span><span class="contact-card-value">pramuditaandhika68@gmail.com</span></div>
@@ -600,7 +556,7 @@
           </div>
         </div>
         <!-- CTA -->
-        <div class="contact-cta glass-card" data-animate="fade-left">
+        <div class="contact-cta glass-card">
           <div class="contact-cta-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="60" height="60"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.36a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
           <h3 class="contact-cta-title">Mari Berkolaborasi!</h3>
           <p class="contact-cta-desc">Saya terbuka untuk kesempatan kerja, magang, maupun kolaborasi profesional. Jangan ragu untuk menghubungi saya melalui salah satu kanal di samping.</p>
