@@ -642,7 +642,26 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
   line-height: 1.8;
 }
+.about-card-title-spaced { margin-top: 1.75rem; }
 .about-text strong { color: var(--text-primary); }
+
+/* Career interest / hobby tag blocks */
+.about-tags-block {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1.5px solid var(--color-border);
+}
+.about-tags-title {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+.about-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
 
 /* Info Grid */
 .about-info-grid {
@@ -1014,6 +1033,55 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.8;
 }
 .edu-subjects { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+/* ============================================================
+   12b. LANGUAGES SECTION
+============================================================ */
+.language-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.language-card { padding: 1.75rem; }
+.language-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.language-name {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.language-level-badge {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-primary);
+  background: var(--bg-secondary);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+.language-bar {
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.language-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
+  border-radius: var(--radius-full);
+}
+.language-note {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  margin-top: 0.75rem;
+}
 
 /* ============================================================
    13. CERTIFICATES SECTION
@@ -1478,6 +1546,7 @@ h1, h2, h3, h4, h5, h6 {
   .hero-description { margin-left: auto; margin-right: auto; }
 
   .about-grid { grid-template-columns: 1fr; }
+  .language-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .contact-cta { position: static; }
 

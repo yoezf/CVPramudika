@@ -137,3 +137,4 @@ Seluruh teks informasi statis berada di file `index.html`. Anda cukup membuka fi
 
 ## Hubungi Pengembang
 Jika Anda membutuhkan bantuan teknis lebih lanjut mengenai kustomisasi website ini, hubungi tim pengembang web Anda. Semoga portofolio profesional ini sukses membantu Anda meraih peluang karier terbaik!
+

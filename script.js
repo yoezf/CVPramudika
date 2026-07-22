@@ -32,14 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // Complete portfolio assets and certificate registry
 const CERTIFICATES_DATA = [
   {
-    id: "skck-2026",
-    name: "Surat Keterangan Catatan Kepolisian (SKCK)",
-    file: "skck_2026.pdf",
-    issuer: "Kepolisian Negara Republik Indonesia (Polresta Bandung)",
-    date: "04 Februari 2026",
-    tags: ["Legalitas", "Karakter", "SKCK"]
-  },
-  {
     id: "sertifikat-kompetensi-1",
     name: "Sertifikat Pelatihan Manajemen Administrasi & Tata Kelola",
     file: "sertifikat1.pdf",
@@ -74,10 +66,10 @@ const CERTIFICATES_DATA = [
 ];
 
 const PROFESSION_TITLES = [
-  "Administrasi & Manajemen Profesional",
-  "Warehouse & Logistik Specialist",
-  "S1 Ilmu Administrasi Negara",
-  "Pakar Pengolahan Data & Microsoft Office"
+  "Administration • Inventory • Production",
+  "Inventory Staff Profesional",
+  "S.Sos Ilmu Administrasi Sosial",
+  "Pakar Inventory Management & Microsoft Office"
 ];
 
 /* ============================================================
