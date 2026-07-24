@@ -69,7 +69,7 @@ const PROFESSION_TITLES = [
   "Administration • Inventory • Production",
   "Inventory Staff Profesional",
   "S.Sos Ilmu Administrasi Sosial",
-  "Pakar Inventory Management & Microsoft Office"
+  "Inventory Management & Microsoft Office"
 ];
 
 /* ============================================================
