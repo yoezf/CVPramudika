@@ -39,30 +39,6 @@ const CERTIFICATES_DATA = [
     date: "2024",
     tags: ["Administrasi", "Tata Kelola"]
   },
-  {
-    id: "sertifikat-kompetensi-2",
-    name: "Sertifikat Pengolahan Data Tingkat Lanjut (Microsoft Excel)",
-    file: "sertifikat2.pdf",
-    issuer: "Lembaga Sertifikasi Profesi",
-    date: "2024",
-    tags: ["Microsoft Excel", "Data Processing"]
-  },
-  {
-    id: "sertifikat-warehouse",
-    name: "Sertifikat Pelatihan Warehouse & Logistik Operasional",
-    file: "sertifikat3.pdf",
-    issuer: "Asosiasi Logistik Indonesia",
-    date: "2023",
-    tags: ["Warehouse", "Logistik"]
-  },
-  {
-    id: "sertifikat-komunikasi",
-    name: "Sertifikat Komunikasi Profesional & Pelayanan Publik",
-    file: "sertifikat4.pdf",
-    issuer: "Pusat Pelatihan Sektor Publik",
-    date: "2023",
-    tags: ["Komunikasi", "Public Service"]
-  }
 ];
 
 const PROFESSION_TITLES = [
