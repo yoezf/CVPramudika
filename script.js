@@ -30,16 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
    1. CONFIGURATION & STATE
 ============================================================ */
 // Complete portfolio assets and certificate registry
-const CERTIFICATES_DATA = [
-  {
-    id: "sertifikat-kompetensi-1",
-    name: "Sertifikat Pelatihan Manajemen Administrasi & Tata Kelola",
-    file: "sertifikat1.pdf",
-    issuer: "Universitas Nurtanio Bandung",
-    date: "2024",
-    tags: ["Administrasi", "Tata Kelola"]
-  },
-];
+
 
 const PROFESSION_TITLES = [
   "Administration • Inventory • Production",
