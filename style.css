@@ -1377,6 +1377,27 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.25rem;
 }
 
+/* Custom Footer Creator Yoezf */
+      .footer-creator {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+      }
+      .footer-creator p {
+        font-size: var(--font-size-xs);
+        color: rgba(255, 255, 255, 0.45);
+      }
+      .footer-creator .creator-link {
+        font-weight: 600;
+        color: var(--color-primary);
+        transition: var(--transition-fast);
+        text-decoration: none;
+      }
+      .footer-creator .creator-link:hover {
+        color: var(--color-white);
+        text-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+      }
+
 /* ============================================================
    17. BACK TO TOP
 ============================================================ */
